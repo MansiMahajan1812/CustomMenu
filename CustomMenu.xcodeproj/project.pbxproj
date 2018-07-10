@@ -14,6 +14,9 @@
 		B167F6EE20EB3F5100C22B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B167F6EC20EB3F5100C22B7D /* LaunchScreen.storyboard */; };
 		B167F6F920EB3F5100C22B7D /* CustomMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B167F6F820EB3F5100C22B7D /* CustomMenuTests.swift */; };
 		B167F70420EB3F5100C22B7D /* CustomMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B167F70320EB3F5100C22B7D /* CustomMenuUITests.swift */; };
+		B167F71720EB485900C22B7D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B167F71620EB485900C22B7D /* SWRevealViewController.m */; };
+		B167F71920EB539700C22B7D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B167F71820EB539700C22B7D /* TableViewController.swift */; };
+		B167F71B20EB542200C22B7D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B167F71A20EB542200C22B7D /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,11 @@
 		B167F6FF20EB3F5100C22B7D /* CustomMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B167F70320EB3F5100C22B7D /* CustomMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuUITests.swift; sourceTree = "<group>"; };
 		B167F70520EB3F5100C22B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B167F71420EB485800C22B7D /* CustomMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CustomMenu-Bridging-Header.h"; sourceTree = "<group>"; };
+		B167F71520EB485900C22B7D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		B167F71620EB485900C22B7D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		B167F71820EB539700C22B7D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B167F71A20EB542200C22B7D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,15 @@
 		B167F6E220EB3F5100C22B7D /* CustomMenu */ = {
 			isa = PBXGroup;
 			children = (
+				B167F71320EB483600C22B7D /* SWRevealViewController */,
 				B167F6E320EB3F5100C22B7D /* AppDelegate.swift */,
 				B167F6E520EB3F5100C22B7D /* ViewController.swift */,
 				B167F6E720EB3F5100C22B7D /* Main.storyboard */,
 				B167F6EA20EB3F5100C22B7D /* Assets.xcassets */,
 				B167F6EC20EB3F5100C22B7D /* LaunchScreen.storyboard */,
 				B167F6EF20EB3F5100C22B7D /* Info.plist */,
+				B167F71820EB539700C22B7D /* TableViewController.swift */,
+				B167F71A20EB542200C22B7D /* TableViewCell.swift */,
 			);
 			path = CustomMenu;
 			sourceTree = "<group>";
@@ -123,6 +134,16 @@
 				B167F70520EB3F5100C22B7D /* Info.plist */,
 			);
 			path = CustomMenuUITests;
+			sourceTree = "<group>";
+		};
+		B167F71320EB483600C22B7D /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B167F71520EB485900C22B7D /* SWRevealViewController.h */,
+				B167F71620EB485900C22B7D /* SWRevealViewController.m */,
+				B167F71420EB485800C22B7D /* CustomMenu-Bridging-Header.h */,
+			);
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +214,7 @@
 				TargetAttributes = {
 					B167F6DF20EB3F5100C22B7D = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					B167F6F320EB3F5100C22B7D = {
@@ -259,8 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B167F71B20EB542200C22B7D /* TableViewCell.swift in Sources */,
 				B167F6E620EB3F5100C22B7D /* ViewController.swift in Sources */,
 				B167F6E420EB3F5100C22B7D /* AppDelegate.swift in Sources */,
+				B167F71720EB485900C22B7D /* SWRevealViewController.m in Sources */,
+				B167F71920EB539700C22B7D /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,11 +451,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CustomMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TVE.CustomMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomMenu/SWRevealViewController/CustomMenu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,11 +468,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CustomMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TVE.CustomMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomMenu/SWRevealViewController/CustomMenu-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
